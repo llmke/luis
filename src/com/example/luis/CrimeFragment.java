@@ -9,6 +9,8 @@ import android.app.DatePickerDialog;
 import android.app.DatePickerDialog.OnDateSetListener;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.hardware.Camera;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -30,6 +32,7 @@ import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 public class CrimeFragment extends Fragment {
 
@@ -37,6 +40,7 @@ public class CrimeFragment extends Fragment {
 	private EditText mTitleText;
 	private Button mButton;
 	private CheckBox mCheckBox;
+	private ImageButton mImageButton;
 	
 	private static final String ALERT_DATE = "date";
 	
@@ -130,6 +134,22 @@ public class CrimeFragment extends Fragment {
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 				mCrime.setmSolved(isChecked);
 				
+			}
+		});
+		PackageManager pm = getActivity().getPackageManager();
+		boolean hasACamera = pm.hasSystemFeature(PackageManager.FEATURE_CAMERA) ||
+				pm.hasSystemFeature(PackageManager.FEATURE_CAMERA_FRONT) ||
+				Build.VERSION.SDK_INT < Build.VERSION_CODES.GINGERBREAD ||
+				Camera.getNumberOfCameras() > 0;
+		mImageButton = (ImageButton)v.findViewById(R.id.imageButton1);
+		if(!hasACamera){
+			mImageButton.setEnabled(false);
+		}
+		mImageButton.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent i = new Intent(getActivity(), CrimeCameraActivity.class);
+				startActivity(i);
 			}
 		});
 		return v;

@@ -27,24 +27,25 @@ public final class R {
         public static final int lovely=0x7f020002;
     }
     public static final class id {
-        public static final int action_settings=0x7f050012;
-        public static final int crime_camera_surfaceView=0x7f050009;
-        public static final int crime_camera_takePictureButton=0x7f05000a;
-        public static final int crime_date=0x7f050007;
-        public static final int crime_details_label=0x7f050006;
-        public static final int crime_list_item_dateTextView=0x7f05000d;
-        public static final int crime_list_item_solvedCheckBox=0x7f05000b;
-        public static final int crime_list_item_titleTextView=0x7f05000c;
-        public static final int crime_solved=0x7f050008;
-        public static final int crime_title=0x7f050005;
-        public static final int crime_title_label=0x7f050004;
+        public static final int action_settings=0x7f050013;
+        public static final int crime_camera_surfaceView=0x7f05000a;
+        public static final int crime_camera_takePictureButton=0x7f05000b;
+        public static final int crime_date=0x7f050008;
+        public static final int crime_details_label=0x7f050007;
+        public static final int crime_list_item_dateTextView=0x7f05000e;
+        public static final int crime_list_item_solvedCheckBox=0x7f05000c;
+        public static final int crime_list_item_titleTextView=0x7f05000d;
+        public static final int crime_solved=0x7f050009;
+        public static final int crime_title=0x7f050006;
+        public static final int crime_title_label=0x7f050005;
         public static final int date_picker=0x7f050002;
         public static final int dialog_time=0x7f050003;
         public static final int fragmentContainer=0x7f050001;
-        public static final int menu_item_del_crime=0x7f05000f;
-        public static final int menu_item_delete_crime=0x7f05000e;
-        public static final int menu_item_new_crime=0x7f050010;
-        public static final int menu_item_show_subtitle=0x7f050011;
+        public static final int imageButton1=0x7f050004;
+        public static final int menu_item_del_crime=0x7f050010;
+        public static final int menu_item_delete_crime=0x7f05000f;
+        public static final int menu_item_new_crime=0x7f050011;
+        public static final int menu_item_show_subtitle=0x7f050012;
         public static final int viewPager=0x7f050000;
     }
     public static final class layout {
